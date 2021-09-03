@@ -12,7 +12,8 @@ const app = new Koa();
 
 app.use(bodyParser());
 //app.use(serve(__dirname + '/public'));//for development!!!
-app.use(serve(__dirname + '../../my-app/dist'));
+//app.use(serve(__dirname + '../../my-app/dist'));
+app.use(serve(__dirname + '/dist'));
 
 
 router.get('/', (ctx, next) => {
