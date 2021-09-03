@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Moj projekat",
   "main": "app.js",
-  "engines" : { "node" : ">=0.12" },
+  "engines": {
+    "node": ">=0.12"
+  },
   "dependencies": {
     "@koa/router": "^8.0.8",
     "fill-pdf": "^1.1.0",
