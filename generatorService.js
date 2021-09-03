@@ -38,8 +38,7 @@ GetFastTest:function async (person, report) {
         .fillForm(fieldMap)
         .needAppearances()
         .flatten()
-        //.output("./"+person.FirstName+'_'+person.LastName+"_CovidTest.pdf")
-        .output("../my-app/public/"+person.FirstName+'_'+person.LastName+"_CovidTest.pdf")
+        .output("./PDF/"+person.FirstName+'_'+person.LastName+"_CovidTest.pdf")
         .then(pdfBuffer => pdfBuffer)
         .catch(err => { 
             throw err;
@@ -66,8 +65,7 @@ GetPCRTest:function async (person, report) {
             .fillForm(fieldMap)
             .needAppearances()
             .flatten()
-            //.output("./"+person.FirstName+'_'+person.LastName+"_PCR.pdf")
-            .output("../my-app/public/"+person.FirstName+'_'+person.LastName+"_PCR.pdf")
+            .output("./PDF/"+person.FirstName+'_'+person.LastName+"_PCR.pdf")
             .then(pdfBuffer => pdfBuffer)
             .catch(err => { 
                 throw err;
