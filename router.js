@@ -64,5 +64,7 @@ router.post("/api/pcr", async (ctx, next) => {
 
 
 app.use(router.routes());
-app.listen(3080);
+//app.listen(3080);//development
+const port = process.env.port || 8080;
+app.listen(port);
 
