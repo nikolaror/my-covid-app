@@ -1,7 +1,0 @@
-{
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ], 
-    "SCM_DO_BUILD_DURING_DEPLOYMENT":"false"
-}
