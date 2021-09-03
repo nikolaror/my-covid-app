@@ -21,8 +21,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "test",
-    "dev": "nodemon router.js",
     "start": "node router.js"
   },
   "author": "Gaumengangster",
