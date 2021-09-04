@@ -58,17 +58,19 @@ router.post("/api/pcr", async (ctx, next) => {
     
     ctx.type = 'application/pdf';
     ctx.body = pdfBuffer;}
-).get("/api/fast", async (ctx, next) => {
+).get("/api/getfast", async (ctx, next) => {
+    console.log('iiiiiiiii');
     var person = generatePdf.CreatePerson(ctx.request.query);
     var report = {
-        //SampleTakenAt: ctx.request.query.user.SampleTakenAt,//'27.05.2021',
-        //SampleTakenAtTime: ctx.request.query.user.SampleTakenAtTime//'10:41:23'
+        SampleTakenAt: '27.05.2021',
+        SampleTakenAtTime: '10:41:23'
         };
 
     const pdfBuffer = await generatePdf.GetFastTest(person, report);
     
     ctx.type = 'application/pdf';
-    ctx.body = pdfBuffer;}
+    ctx.body = pdfBuffer;
+}
 )
 .get("/api/users", async (ctx, next) => {
         ctx.body = generatePdf.GetPersons();
